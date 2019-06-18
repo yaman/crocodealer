@@ -20,6 +20,6 @@ type Package = String
 data Config = Config
   { username        :: Maybe String
   , repository      :: Maybe String
-  , labelRules           :: [LabelRule]
+  , labelRules      :: [LabelRule]
   , ignoredPackages :: [Package]
   }
