@@ -1,25 +1,20 @@
 module Crocodealer.Config
-  ( LabelRule
-  , Label
-  , Package
-  , Config
-  ) where
+       ( -- * Data type
+         LabelRule
+       , Label
+       , Repo
+       , Config
+       ) where
 
-data Label = Label
-  { name        :: String
-  , description :: String
-  , color       :: String -- Data.Colour.sRGB24read can convert string specifications like "#00aaff" or "00aaff" 
-  }
+import Crocodealer.Core.Label
 
-data LabelRule
-  = Create
-  | Override
-
-type Package = String
+newtype Repo = Repo
+    { unRepo :: Text
+    }
 
 data Config = Config
-  { username        :: Maybe String
-  , repository      :: Maybe String
-  , labelRules      :: [LabelRule]
-  , ignoredPackages :: [Package]
-  }
+    { username            :: Maybe Text
+    , repository          :: Maybe Text
+    , labelRules          :: [LabelRule]
+    , ignoredRepositories :: [Repo]
+    }
