@@ -1,9 +1,6 @@
 module Crocodealer.Config
-       ( -- * Data type
-         LabelRule
-       , Label
-       , Repo
-       , Config
+       ( Repo(..)
+       , Config(..)
        ) where
 
 import Crocodealer.Core.Label
