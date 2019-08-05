@@ -1,6 +1,6 @@
 module Crocodealer.Config
        ( Repo(..)
-       , Config(..)
+       , Config (..)
        ) where
 
 import Crocodealer.Core.Label
