@@ -3,15 +3,16 @@ module Crocodealer.Config
        , Config (..)
        ) where
 
-import Crocodealer.Core.Label
+import Crocodealer.Core.Label as Label
+
 
 newtype Repo = Repo
     { unRepo :: Text
     }
 
 data Config = Config
-    { username            :: Maybe Text
-    , repository          :: Maybe Text
-    , labelRules          :: [LabelRule]
-    , ignoredRepositories :: [Repo]
+    { configUsername            :: !(Maybe Text)
+    , configRepository          :: !(Maybe Text)
+    , configLabelRules          :: ![Label.LabelRule]
+    , configIgnoredRepositories :: ![Repo]
     }
