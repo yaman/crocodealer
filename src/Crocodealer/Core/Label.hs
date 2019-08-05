@@ -1,8 +1,8 @@
 module Crocodealer.Core.Label
-       ( LabelRule(..)
-       , Label(..)
-       , Name(..)
-       , HexColor(..)
+       ( LabelRule (..)
+       , Label (..)
+       , Name (..)
+       , HexColor (..)
        ) where
 
 newtype Name a = Name

@@ -1,5 +1,5 @@
 module Crocodealer.Config
-       ( Repo(..)
+       ( Repo (..)
        , Config (..)
        ) where
 
